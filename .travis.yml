@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - oraclejdk8
+env:
+  matrix:
+    - PROFILE=glassfish-embedded
+    - PROFILE=openejb-embedded
+    - PROFILE=tomee-embedded
+    - PROFILE=weld-se-embedded
+    - PROFILE=wildfly-managed
+
+script: "mvn clean test -P ${SLF4J_VERSION}"

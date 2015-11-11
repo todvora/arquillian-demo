@@ -1,12 +1,8 @@
 package cz.tomasdvorak;
 
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
+import javax.ejb.Local;
 
-@Stateless
-@LocalBean
-public class DataService {
-    public String getMessage() {
-        return "hello";
-    }
+@Local
+public interface DataService {
+    String getResponse();
 }
