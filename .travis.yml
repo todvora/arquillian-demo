@@ -10,4 +10,4 @@ env:
     - PROFILE=weld-se-embedded
     - PROFILE=wildfly-managed
 
-script: "mvn clean test -P ${SLF4J_VERSION}"
+script: "mvn clean test -P ${PROFILE}"
