@@ -6,7 +6,6 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +21,7 @@ public class DataServiceTest {
     @Deployment
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(JavaArchive.class, "test.jar")
-            .addPackage(DataService.class.getPackage())
+            .addPackages(true, "cz.tomasdvorak")
             .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
