@@ -1,5 +1,6 @@
-package cz.tomasdvorak;
+package tomasdvorak.injection;
 
+import cz.tomasdvorak.injection.DataService;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
@@ -21,7 +22,7 @@ public class DataServiceTest {
     @Deployment
     public static Archive<?> createDeployment() {
         return ShrinkWrap.create(JavaArchive.class, "test.jar")
-            .addPackages(true, "cz.tomasdvorak")
+            .addPackages(true, "cz.tomasdvorak.injection")
             .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 

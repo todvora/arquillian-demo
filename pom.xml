@@ -5,10 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cz.tomasdvorak</groupId>
-    <artifactId>arquillian-test</artifactId>
+    <artifactId>arquillian-test-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>basic-injection</module>
+        <module>extension</module>
+    </modules>
 
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <dependencyManagement>
         <dependencies>
@@ -55,6 +59,9 @@
 
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>-Djboss.socket.binding.port-offset=300</argLine>
+                </configuration>
                 <version>2.17</version>
             </plugin>
         </plugins>

@@ -1,4 +1,4 @@
-package cz.tomasdvorak;
+package cz.tomasdvorak.injection;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
